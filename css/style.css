@@ -1,0 +1,345 @@
+:root {
+    --primary-gold: #c5a880;
+    --dark-bg: #0f1115;
+    --card-bg: #16191f;
+    --input-bg: #1f232b;
+    --text-light: #f8f9fa;
+    --text-muted: #b2b8c5;
+    --serif-font: 'Cormorant Garamond', serif;
+    --sans-font: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    font-family: var(--sans-font);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .brand-font {
+    font-family: var(--serif-font);
+    color: var(--text-light);
+}
+
+.text-gold {
+    color: var(--primary-gold) !important;
+}
+
+/* 1. Navbar Customization */
+.navbar {
+    background: #BD7A2D;
+    background: linear-gradient(90deg, rgba(189, 122, 45, 1) 25%, rgba(186, 135, 67, 1) 42%, rgba(0, 0, 0, 1) 80%);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(197, 168, 128, 0.1);
+}
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-light) !important;
+    letter-spacing: 2px;
+}
+.navbar-brand span {
+    color: black;
+}
+.nav-link {
+    color: white;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+.nav-link:hover, .nav-link.active {
+    color: goldenrod;
+}
+
+/* 2. Hero Video Section */
+.hero-video-container {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+.hero-video-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+.hero-video-fallback {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80') no-repeat center center;
+    background-size: cover;
+    z-index: 0;
+}
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(15, 17, 21, 0.5), #0f1115);
+    z-index: 2;
+}
+.hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 850px;
+}
+.hero-title {
+    font-size: 4.5rem;
+    line-height: 1.1;
+}
+.hero-title span {
+    font-style: italic;
+}
+
+/* Premium Shared Button Elements */
+.btn-gold {
+    background-color: var(--primary-gold);
+    color: #0f1115;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 14px 32px;
+    border-radius: 0;
+    transition: all 0.3s ease;
+    border: 1px solid var(--primary-gold);
+    cursor: pointer;
+}
+.btn-gold:hover {
+    background-color: #b3956d;
+    border-color: #b3956d;
+    color: #0f1115;
+    transform: translateY(-2px);
+}
+.btn-outline-gold {
+    border: 1px solid var(--primary-gold);
+    color: var(--primary-gold);
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 14px 32px;
+    border-radius: 0;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+.btn-outline-gold:hover {
+    background-color: var(--primary-gold);
+    color: #0f1115;
+}
+
+/* 3. Why Choose Us / Counter Layout */
+.stat-box {
+    background-color: var(--card-bg);
+    border-left: 3px solid var(--primary-gold);
+    padding: 25px;
+}
+.stat-number {
+    font-family: var(--serif-font);
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+/* 4. Featured Properties Grid */
+.property-card {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.property-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-gold);
+}
+.property-img-wrapper {
+    position: relative;
+    height: 240px;
+    overflow: hidden;
+}
+.property-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.property-card:hover .property-img {
+    transform: scale(1.05);
+}
+.property-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: var(--primary-gold);
+    color: #0f1115;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    text-transform: uppercase;
+}
+
+/* 5. Our Services */
+.service-card {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    padding: 40px 30px;
+    height: 100%;
+    transition: border-color 0.3s ease;
+}
+.service-card:hover {
+    border-color: rgba(197, 168, 128, 0.3);
+}
+.service-icon {
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    display: inline-block;
+}
+
+/* 6. Service Process (Timeline UI) */
+.process-timeline {
+    position: relative;
+    border-left: 2px solid rgba(197, 168, 128, 0.2);
+    padding-left: 45px;
+    margin-left: 20px;
+}
+.process-item {
+    position: relative;
+    margin-bottom: 45px;
+}
+.process-item:last-child {
+    margin-bottom: 0;
+}
+.process-badge {
+    position: absolute;
+    left: -71px;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--primary-gold);
+    color: #0f1115;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    border: 4px solid var(--dark-bg);
+}
+
+/* 7. Testimonials Slider styling */
+.testimonial-card {
+    background-color: var(--card-bg);
+    padding: 50px 40px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+.quote-icon {
+    font-size: 2.5rem;
+    color: var(--primary-gold);
+}
+.carousel-indicators [data-bs-target] {
+    background-color: var(--primary-gold);
+}
+
+/* 8. Senior Level Form Controls & Visible UI Architecture */
+.form-control-premium {
+    background-color: var(--input-bg) !important;
+    color: var(--text-light) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 0px !important;
+    padding: 14px 18px;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.form-control-premium:focus {
+    outline: none;
+    border-color: var(--primary-gold) !important;
+    box-shadow: 0 0 0 3px rgba(197, 168, 128, 0.15) !important;
+}
+.form-control-premium::placeholder {
+    color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Advanced UI Radio Selection Chips replacing buggy native select drop-downs */
+.budget-selection-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100%, 150px));
+    gap: 12px;
+}
+@media(min-width: 576px) {
+    .budget-selection-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+.budget-chip {
+    background-color: var(--input-bg);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 16px;
+    text-align: center;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.budget-chip:hover {
+    border-color: rgba(197, 168, 128, 0.5);
+    background-color: rgba(197, 168, 128, 0.02);
+}
+.budget-chip.active {
+    border-color: var(--primary-gold);
+    background-color: rgba(197, 168, 128, 0.08);
+    color: var(--primary-gold);
+    box-shadow: 0 0 0 3px rgba(197, 168, 128, 0.1);
+}
+.budget-chip i {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    opacity: 0.7;
+}
+.budget-chip.active i {
+    opacity: 1;
+}
+
+/* Form Feedback Banner */
+.form-notification {
+    display: none;
+    padding: 14px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Footer Section */
+footer {
+    background-color: #08090c;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 80px 0 30px;
+}
+.footer-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+.footer-links list-unstyled li {
+    margin-bottom: 12px;
+}
+.footer-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.footer-links a:hover {
+    color: var(--text-light);
+}
