@@ -68,9 +68,11 @@ h1, h2, h3, h4, .brand-font {
     min-height: 600px;
     width: 100%;
     overflow: hidden;
+    margin-top: 100px;
     display: flex;
     align-items: center;
 }
+
 .hero-video-bg {
     position: absolute;
     top: 50%;
