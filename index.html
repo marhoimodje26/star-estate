@@ -9,7 +9,7 @@
     <!-- Font Awesome 6 Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0;500;0;700;1;400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -39,11 +39,12 @@
     <section id="home" class="hero-video-container">
         <div class="hero-video-fallback"></div>
         <video class="hero-video-bg" autoplay loop muted playsinline>
-            <source src="assets/160032-820167242_medium.mp4" type="video/mp4">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-luxury-resort-with-swimming-pool-and-palm-trees-40188-large.mp4" type="video/mp4">
         </video>
         <div class="hero-overlay"></div>
         <div class="container">
-            <div class="hero-content text-left">
+            <!-- Senior Architecture: Hero instantly fades in on load -->
+            <div class="hero-content text-left reveal-element" id="heroContent">
                 <h1 class="hero-title mb-4 text-white">Secure An Appreciating Legacy. Build <span>Generational Wealth</span>.</h1>
                 <p class="lead text-white-50 mb-5 fs-4" style="max-width: 650px;">Bypass highly volatile standard financial assets. Acquire legally unassailable, high-yield land and premium developments with Star Estate.</p>
                 <div class="d-flex flex-wrap gap-3">
@@ -58,7 +59,7 @@
     <section id="about" class="py-5 my-5">
         <div class="container">
             <div class="row align-items-center gy-5">
-                <div class="col-lg-6">
+                <div class="col-lg-6 reveal-element">
                     <span class="text-uppercase tracking-widest text-gold small fw-bold d-block mb-2">Uncompromising Standards</span>
                     <h2 class="display-5 mb-4">Why Institutional Investors Anchor Growth with Star Estate</h2>
                     <p class="text-secondary mb-4 fs-5">We do not sell volatile concepts or cut construction margins. Every parcel inside our ecosystem undergoes strict legal certification before deployment, protecting your multi-generational capital assets.</p>
@@ -79,7 +80,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 reveal-element">
                     <div class="p-5 bg-black border border-secondary text-center">
                         <h3 class="mb-4 text-white brand-font" style="font-size: 45px;">Historical Portfolio Growth</h3>
                         <p class="text-white-50 mb-5">Our track record across commercial acquisitions and retail property sales completed internationally over the financial years.</p>
@@ -117,15 +118,16 @@
         </div>
     </section>
 
-    <!-- 4. FEATURED PROPERTIES (15 TRENDING ITEMS GENERATED WITH INTERACTIVE JS CONTROLS) -->
+    <!-- 4. FEATURED PROPERTIES -->
     <section id="properties" class="py-5 bg-black">
         <div class="container">
-            <div class="text-center max-width-600 mb-5">
+            <div class="text-center max-width-600 mb-5 reveal-element">
                 <span class="text-uppercase tracking-widest text-gold small fw-bold d-block mb-2">Exclusive Portfolio</span>
                 <h2 class="display-5 text-white">Trending Featured Allocations</h2>
                 <p class="text-white-50">A hand-picked selection of high-yield residential plots, commercial units, and smart estates open for capital allocation.</p>
             </div>
             
+            <!-- Cards will be injected dynamically and handled with staggered reveal timings -->
             <div class="row g-4" id="propertyGridContainer"></div>
         </div>
     </section>
@@ -133,14 +135,14 @@
     <!-- 5. OUR SERVICES -->
     <section id="services" class="py-5 my-5">
         <div class="container">
-            <div class="text-center mb-5">
+            <div class="text-center mb-5 reveal-element">
                 <span class="text-uppercase tracking-widest text-gold small fw-bold d-block mb-2">Core Competencies</span>
                 <h2 class="display-5 text-white">What We Strategically Offer</h2>
                 <p class="text-white-50">Comprehensive high-end solutions designed around the lifestyle and scaling needs of contemporary high-net-worth investors.</p>
             </div>
             
             <div class="row g-4">
-                <div class="col-md-4">
+                <div class="col-md-4 reveal-element">
                     <div class="service-card">
                         <div class="service-icon text-gold">
                             <i class="fa-solid fa-building-shield"></i>
@@ -149,7 +151,7 @@
                         <p class="text-white-50 mb-0">Complete end-to-end processing of prime land bank portfolios, featuring extensive topographic checks and unassailable legal titles.</p>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 reveal-element">
                     <div class="service-card">
                         <div class="service-icon text-gold">
                             <i class="fa-solid fa-compass-drafting"></i>
@@ -158,7 +160,7 @@
                         <p class="text-white-50 mb-0">Developing bespoke structural engineering profiles optimized for low energy footprints, high automation, and maximum valuation yield.</p>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 reveal-element">
                     <div class="service-card">
                         <div class="service-icon text-gold">
                             <i class="fa-solid fa-chart-line"></i>
@@ -174,35 +176,35 @@
     <!-- 6. SERVICE PROCESS HOW IT WORKS SECTION -->
     <section id="process" class="py-5 bg-black">
         <div class="container" style="max-width: 900px;">
-            <div class="text-center mb-5">
+            <div class="text-center mb-5 reveal-element">
                 <span class="text-uppercase tracking-widest text-gold small fw-bold d-block mb-2">Onboarding Pipeline</span>
                 <h2 class="display-5 text-white">The Client Procurement Journey</h2>
                 <p class="text-white-50">How Star Estate structures our communication, asset screening, and final execution mechanics safely step-by-step.</p>
             </div>
 
             <div class="process-timeline">
-                <div class="process-item">
+                <div class="process-item reveal-element">
                     <div class="process-badge">
                         <i class="fa-solid fa-file-signature fa-xs"></i>
                     </div>
                     <h4 class="text-white mb-2">Intake & Qualification Screening</h4>
                     <p class="text-white-50">Submit the structural application form below. Our underwriting group reviews your capital parameters, asset types of choice, and investment timelines within 24 business hours.</p>
                 </div>
-                <div class="process-item">
+                <div class="process-item reveal-element">
                     <div class="process-badge">
                         <i class="fa-solid fa-comments fa-xs"></i>
                     </div>
                     <h4 class="text-white mb-2">Private Consultation Strategy Call</h4>
                     <p class="text-white-50">We arrange a private virtual session or physical site tour layout review to walk you through off-market maps, underlying engineering models, and historical price comparisons.</p>
                 </div>
-                <div class="process-item">
+                <div class="process-item reveal-element">
                     <div class="process-badge">
                         <i class="fa-solid fa-map-location-dot fa-xs"></i>
                     </div>
                     <h4 class="text-white mb-2">Asset Allocation Selection</h4>
-                    <p class="text-white-50 ×">Once your identity background checks lock clear, you choose your specific coordinates inside Phase 2 or choose a tailored custom smart villa build package.</p>
+                    <p class="text-white-50">Once your identity background checks lock clear, you choose your specific coordinates inside Phase 2 or choose a tailored custom smart villa build package.</p>
                 </div>
-                <div class="process-item">
+                <div class="process-item reveal-element">
                     <div class="process-badge">
                         <i class="fa-solid fa-file-contract fa-xs"></i>
                     </div>
@@ -216,12 +218,12 @@
     <!-- 7. CUSTOMER TESTIMONIALS SLIDER SECTION -->
     <section id="testimonials" class="py-5 my-5">
         <div class="container" style="max-width: 800px;">
-            <div class="text-center mb-5">
+            <div class="text-center mb-5 reveal-element">
                 <span class="text-uppercase tracking-widest text-gold small fw-bold d-block mb-2">Verified Success Profiles</span>
                 <h2 class="display-5 text-white">Partner Case Studies</h2>
             </div>
 
-            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div id="testimonialCarousel" class="carousel slide reveal-element" data-bs-ride="carousel">
                 <div class="carousel-indicators mb-0" style="bottom: -30px;">
                     <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"></button>
                     <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
@@ -266,12 +268,12 @@
     <!-- CONTACT FORM SECTION -->
     <section id="contact" class="py-5 bg-black border-top border-secondary">
         <div class="container" style="max-width: 650px;">
-            <div class="text-center mb-5">
+            <div class="text-center mb-5 reveal-element">
                 <h2 class="display-5 text-white">Initiate Private Allocation Vetting</h2>
                 <p class="text-white-50">Complete the intake variables below to request access paths into upcoming off-market inventory.</p>
             </div>
             
-            <form id="allocationForm" class="p-4 p-md-5 bg-dark border border-secondary" novalidate>
+            <form id="allocationForm" class="p-4 p-md-5 bg-dark border border-secondary reveal-element" novalidate>
                 <!-- Real-time Feedback Banner -->
                 <div id="formFeedback" class="form-notification alert"></div>
 
@@ -285,7 +287,6 @@
                     <input type="email" id="clientEmail" class="form-control form-control-premium" placeholder="sarah@firm.com" required>
                 </div>
                 
-                <!-- SENIOR UPGRADE: Replaced hidden/buggy native select drop-down with clean selection chips -->
                 <div class="mb-4">
                     <label class="form-label text-white-50 small text-uppercase tracking-wider fw-semibold d-block mb-3">Target Development Range</label>
                     <div class="budget-selection-wrapper" id="budgetRangeWrapper">
@@ -312,7 +313,7 @@
     <!-- 8. HIGH-END MINIMALIST FOOTER SECTION -->
     <footer>
         <div class="container">
-            <div class="row gy-5 mb-5">
+            <div class="row gy-5 mb-5 reveal-element">
                 <div class="col-lg-4">
                     <h3 class="navbar-brand mb-3" href="#">STAR<span>ESTATE</span></h3>
                     <p class="text-white-50 me-md-5">A modern corporate infrastructure asset model, building high-yield legacy frameworks for discerning capital allocators globally.</p>
@@ -339,8 +340,8 @@
                     <p class="text-white-50 small">Direct Contact: investments@starestatehub.com</p>
                 </div>
             </div>
-            <div class="pt-4 border-top border-secondary text-center">
-                <p class="mb-0 small text-white-50">&copy; 2026 Star Estate Private Network Ecosystem. All architectural and legal data rights structured systematically under active tracking parameters.</p>
+            <div class="pt-4 border-top border-secondary text-center small text-white-50">
+                <p class="mb-0">&copy; 2026 Star Estate Private Network Ecosystem. All architectural and legal data rights structured systematically under active tracking parameters.</p>
             </div>
         </div>
     </footer>
@@ -348,7 +349,7 @@
     <!-- Bootstrap 5 JavaScript Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- JS REVENUE LOGIC & DYNAMIC ELEMENT RENDER pipelines -->
+    <!-- JS PROCESSES & INTERSECTION OBSERVER ENGINES -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             // --- 1. Dynamic Property Generation Pipeline (15 Items) ---
@@ -374,8 +375,9 @@
             let outputHTML = "";
 
             properties.forEach(item => {
+                // Notice the addition of 'reveal-element' class on every injected layout grid block
                 outputHTML += `
-                    <div class="col-md-6 col-lg-4">
+                    <div class="col-md-6 col-lg-4 reveal-element">
                         <div class="property-card h-100">
                             <div class="property-img-wrapper">
                                 <span class="property-badge">${item.zone}</span>
@@ -394,7 +396,44 @@
             });
             gridContainer.innerHTML = outputHTML;
 
-            // --- 2. Advanced Form Selection Chip Engine (State Handler) ---
+            // --- 2. SENIOR ANIMATION ENGINE: Intersection Observer Initialization ---
+            const observerOptions = {
+                root: null, // Viewport tracking base
+                rootMargin: "0px",
+                threshold: 0.08 // Fires early when 8% of the block is exposed
+            };
+
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const element = entry.target;
+                        
+                        // Handle Staggered Timing within Multi-Column Grid Layout blocks
+                        if (element.parentElement && (element.parentElement.classList.contains('row') || element.parentElement.classList.contains('process-timeline'))) {
+                            const index = Array.from(element.parentElement.children).indexOf(element);
+                            // Applies incremental millisecond transition offsets cleanly
+                            element.style.transitionDelay = `${(index % 3) * 120}ms`;
+                        }
+                        
+                        element.classList.add("revealed");
+                        observer.unobserve(element); // Clean memory immediately after execution
+                    }
+                });
+            }, observerOptions);
+
+            // Bind all elements structured to reveal seamlessly
+            document.querySelectorAll(".reveal-element").forEach(el => {
+                revealObserver.observe(el);
+            });
+
+            // Force instantaneous presentation layer for hero content block
+            setTimeout(() => {
+                const hero = document.getElementById("heroContent");
+                if(hero) hero.classList.add("revealed");
+            }, 150);
+
+
+            // --- 3. Form Selection Chip Engine (State Handler) ---
             let selectedBudgetVal = "";
             const chips = document.querySelectorAll(".budget-chip");
             
@@ -406,7 +445,7 @@
                 });
             });
 
-            // --- 3. Senior Level Form Architecture Validation Processing ---
+            // --- 4. Form Architecture Validation Processing ---
             const form = document.getElementById("allocationForm");
             const feedback = document.getElementById("formFeedback");
 
@@ -418,7 +457,6 @@
                 const nameInput = document.getElementById("clientName").value.trim();
                 const emailInput = document.getElementById("clientEmail").value.trim();
 
-                // Validation Guard Clauses
                 if (!nameInput || !emailInput) {
                     feedback.classList.add("alert-danger");
                     feedback.innerHTML = `<i class="fa-solid fa-circle-exclamation me-2"></i> Error: Complete all mandatory identity parameters.`;
@@ -433,12 +471,10 @@
                     return;
                 }
 
-                // Successful pipeline output state
                 feedback.classList.add("alert-success");
                 feedback.innerHTML = `<i class="fa-solid fa-circle-check me-2"></i> Identification Verified. Verification file compiled for <strong>${selectedBudgetVal}</strong> range allocation.`;
                 feedback.style.display = "block";
 
-                // Resetting Form safely
                 form.reset();
                 chips.forEach(c => c.classList.remove("active"));
                 selectedBudgetVal = "";

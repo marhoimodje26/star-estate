@@ -25,7 +25,19 @@ h1, h2, h3, h4, .brand-font {
     color: var(--primary-gold) !important;
 }
 
-/* 1. Navbar Customization */
+.reveal-element {
+    opacity: 0;
+    transform: scale3d(0.98, 0.98, 1);
+    will-change: transform, opacity;
+    transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), 
+    opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-element.revealed {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+}
+
 .navbar {
     background: #BD7A2D;
     background: linear-gradient(90deg, rgba(189, 122, 45, 1) 25%, rgba(186, 135, 67, 1) 42%, rgba(0, 0, 0, 1) 80%);
@@ -42,15 +54,14 @@ h1, h2, h3, h4, .brand-font {
     color: black;
 }
 .nav-link {
-    color: white;
+    color: var(--text-muted) !important;
     font-weight: 400;
     transition: color 0.3s ease;
 }
 .nav-link:hover, .nav-link.active {
-    color: goldenrod;
+    color: var(--text-light) !important;
 }
 
-/* 2. Hero Video Section */
 .hero-video-container {
     position: relative;
     height: 100vh;
@@ -104,7 +115,6 @@ h1, h2, h3, h4, .brand-font {
     font-style: italic;
 }
 
-/* Premium Shared Button Elements */
 .btn-gold {
     background-color: var(--primary-gold);
     color: #0f1115;
@@ -137,7 +147,6 @@ h1, h2, h3, h4, .brand-font {
     color: #0f1115;
 }
 
-/* 3. Why Choose Us / Counter Layout */
 .stat-box {
     background-color: var(--card-bg);
     border-left: 3px solid var(--primary-gold);
@@ -150,7 +159,6 @@ h1, h2, h3, h4, .brand-font {
     line-height: 1;
 }
 
-/* 4. Featured Properties Grid */
 .property-card {
     background-color: var(--card-bg);
     border: 1px solid rgba(255, 255, 255, 0.05);
@@ -186,7 +194,6 @@ h1, h2, h3, h4, .brand-font {
     text-transform: uppercase;
 }
 
-/* 5. Our Services */
 .service-card {
     background-color: var(--card-bg);
     border: 1px solid rgba(255, 255, 255, 0.03);
@@ -203,7 +210,6 @@ h1, h2, h3, h4, .brand-font {
     display: inline-block;
 }
 
-/* 6. Service Process (Timeline UI) */
 .process-timeline {
     position: relative;
     border-left: 2px solid rgba(197, 168, 128, 0.2);
@@ -233,7 +239,6 @@ h1, h2, h3, h4, .brand-font {
     border: 4px solid var(--dark-bg);
 }
 
-/* 7. Testimonials Slider styling */
 .testimonial-card {
     background-color: var(--card-bg);
     padding: 50px 40px;
@@ -247,7 +252,6 @@ h1, h2, h3, h4, .brand-font {
     background-color: var(--primary-gold);
 }
 
-/* 8. Senior Level Form Controls & Visible UI Architecture */
 .form-control-premium {
     background-color: var(--input-bg) !important;
     color: var(--text-light) !important;
@@ -266,7 +270,6 @@ h1, h2, h3, h4, .brand-font {
     color: rgba(255, 255, 255, 0.3) !important;
 }
 
-/* Advanced UI Radio Selection Chips replacing buggy native select drop-downs */
 .budget-selection-wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100%, 150px));
@@ -311,7 +314,6 @@ h1, h2, h3, h4, .brand-font {
     opacity: 1;
 }
 
-/* Form Feedback Banner */
 .form-notification {
     display: none;
     padding: 14px;
@@ -320,7 +322,6 @@ h1, h2, h3, h4, .brand-font {
     font-weight: 500;
 }
 
-/* Footer Section */
 footer {
     background-color: #08090c;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -332,7 +333,7 @@ footer {
     letter-spacing: 1px;
     margin-bottom: 25px;
 }
-.footer-links list-unstyled li {
+.footer-links li {
     margin-bottom: 12px;
 }
 .footer-links a {
